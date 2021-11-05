@@ -1,3 +1,3 @@
 # CHaserGuiServer
 プログラミング競技CHaserのWindows版GUIサーバアプリ
-このリポジトリはhttps://github.com/oika/CHaserGuiServerからフォークしてきたソフトです。
+このリポジトリは https://github.com/oika/CHaserGuiServer からフォークしてきたソフトです。
