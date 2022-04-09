@@ -32,9 +32,7 @@ namespace Oika.Apps.CHaserGuiServer
                 return false;
             }
 
-            int x;
-            int y;
-            if (!int.TryParse(vals[0], out x) || !int.TryParse(vals[1], out y))
+            if (!int.TryParse(vals[0], out int x) || !int.TryParse(vals[1], out int y))
             {
                 point = new MapPoint();
                 return false;
@@ -61,7 +59,7 @@ namespace Oika.Apps.CHaserGuiServer
         }
 
         public static bool operator == (MapPoint p1, MapPoint p2) {
-            if ((object)p1 == null) return (object)p2 == null;
+            if ((object)p1 is null) return (object)p2 is null;
             return p1.Equals(p2);
         }
 

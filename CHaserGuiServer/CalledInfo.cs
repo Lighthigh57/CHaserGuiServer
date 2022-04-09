@@ -17,14 +17,16 @@ namespace Oika.Apps.CHaserGuiServer
             var mVal = sentChars[0].ToString();
             var dVal = sentChars[1].ToString();
 
-            var info = new CalledInfo();
-            info.Method = Enum.GetValues(typeof(MethodKind))
+            CalledInfo info = new CalledInfo
+            {
+                Method = Enum.GetValues(typeof(MethodKind))
                               .Cast<MethodKind>()
-                              .Single(m => m.ToChar() == mVal);
+                              .Single(m => m.ToChar() == mVal),
 
-            info.Direction = Enum.GetValues(typeof(DirectionKind))
+                Direction = Enum.GetValues(typeof(DirectionKind))
                                  .Cast<DirectionKind>()
-                                 .Single(d => d.ToChar() == dVal);
+                                 .Single(d => d.ToChar() == dVal)
+            };
             return info;
         }
     }
